@@ -1,16 +1,33 @@
-/*Navigation Styling */
+/* page standard */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+						/* fin */
+}						
+						
+						
+						/*Navigation Styling */
 
 /* Navbar container */
 .navbar {
-  display: flex; /* Use flexbox */
-  justify-content: space-between; /* Distribute items evenly */
-  align-items: center; /* Center items vertically */
-  overflow: hidden;
-  background-color: #c2d8b9;
-  font-family: Arial;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: #c2d8b9;
+    font-family: Arial;
 }
 
-/* Home Link */
+
+/* Logo */
+.navbar .logo {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+
+/* NavBar Links (home & who we are) */
 .navbar a {
   float: left;
   font-size: 16px;
@@ -38,19 +55,19 @@
   font-family: inherit; /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
+/* Add background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #a0bfa0;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999; /* Ensure dropdown is above other content */
 }
 
 /* Links inside the dropdown */
@@ -63,30 +80,79 @@
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
+/* Add a background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #a1b5d8;
+  background-color:  #b6ccf1;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
-}
-					/* fin nav styling */
+}				
 					
-					/*donate button */
-/* Donate Button */
+					/* Nav Bar Donate Button */
+/* Button */
 .navbar .donate {
-    padding: 10px 20px; /* Adjust padding as needed */
-    color: white;
+    padding: 10px 20px; 
+    color: white !important;
     text-decoration: none;
-    background-color: #ddb6c3; /* Green background color */
+    background-color: #ddb6c3; /* background color */
     border-radius: 20px; /* Round off the edges */
+    position: relative; /* To position the heart icon */
+	display: inline-block;
+}
+
+/* Heart Icon */
+.navbar .donate::after {
+    content: '\2764\FE0F'; /* Unicode for heart icon */
+    position: absolute;
+    right: -20px; /* Adjust distance from the text */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    color: white; /* Set the color to white */
 }
 
 /* Hover effect for Donate Button */
 .navbar .donate:hover {
-    background-color: #b394a2; /* Darker green background color on hover */
+    background-color: #b394a2; 
 }
 
 					/*fin donate button */
+					
+					/* fin nav styling */
+					
+					/*footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #c2d8b9;
+    padding: 10px; /* Add padding to create some space around the copyright notice */
+    text-align: center; /* Align the copyright notice to the center */
+}
+
+			/* Copyright notice styling */
+footer .copyright {
+    color: #738290; 
+    font-size: 14px; 
+}
+
+/* Footer Donate Button */
+footer .donate {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #ddb6c3; /* background color */
+    border-radius: 20px; /* Round off the edges */
+    position: relative; /* To position the heart icon */
+    margin-top: 20px; /* Add margin to create space between the donate button and copyright notice */
+    display: inline-block; /* Ensure it doesn't take full width */
+}
+
+/* Hover effect for Footer Donate Button */
+footer .donate:hover {
+    background-color: #b394a2;
+}
+
+					/*fin footer styling */

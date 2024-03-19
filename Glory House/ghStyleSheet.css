@@ -1,4 +1,4 @@
-/* page standard */
+						/* page standard */
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +17,7 @@
     overflow: hidden;
     background-color: #8baf7c;
     font-family: Gotham;
+	border-bottom: 4px solid #323042;
 }
 
 
@@ -94,9 +95,9 @@
 /* Button */
 .navbar .donate {
     padding: 10px 20px; 
-    color: white !important;
+    color:#8baf7c!important;
     text-decoration: none;
-    background-color: #ddb6c3; /* background color */
+    background-color:  #fdfdf5; /* background color */
     border-radius: 20px; /* Round off the edges */
     position: relative; /* To position the heart icon */
 	display: inline-block;
@@ -114,7 +115,7 @@
 
 /* Hover effect for Donate Button */
 .navbar .donate:hover {
-    background-color: #b394a2; 
+    background-color: #f7f7e0; 
 }
 
 					/*fin donate button */
@@ -141,9 +142,9 @@ footer .copyright {
 /* Footer Donate Button */
 footer .donate {
     padding: 10px 20px;
-    color: white;
+    color: #8baf7c;
     text-decoration: none;
-    background-color: #ddb6c3; /* background color */
+    background-color:#fdfdf5; /* background color */
     border-radius: 20px; /* Round off the edges */
     position: relative; /* To position the heart icon */
     margin-top: 20px; /* Add margin to create space between the donate button and copyright notice */
@@ -152,7 +153,7 @@ footer .donate {
 
 /* Hover effect for Footer Donate Button */
 footer .donate:hover {
-    background-color: #b394a2;
+    background-color: #f7f7e0;
 }
 
 					/*fin footer styling */

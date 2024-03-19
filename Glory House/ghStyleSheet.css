@@ -15,8 +15,8 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    background-color: #c2d8b9;
-    font-family: Arial;
+    background-color: #8baf7c;
+    font-family: Gotham;
 }
 
 
@@ -82,7 +82,7 @@
 
 /* Add a background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color:  #b6ccf1;
+  background-color:  #c7d7e6;
 }
 
 /* Show the dropdown menu on hover */
@@ -127,7 +127,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #c2d8b9;
+    background-color: #8baf7c;
     padding: 10px; /* Add padding to create some space around the copyright notice */
     text-align: center; /* Align the copyright notice to the center */
 }

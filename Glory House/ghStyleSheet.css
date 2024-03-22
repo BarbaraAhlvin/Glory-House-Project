@@ -1,4 +1,4 @@
-						/* page standard */
+							/* page standard */
 * {
     margin: 0;
     padding: 0;
@@ -18,13 +18,16 @@
     background-color: #8baf7c;
     font-family: Gotham;
 	border-bottom: 4px solid #323042;
+	padding-right:10px;
 }
 
 
 /* Logo */
-.navbar .logo {
+img .navbar .logo {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
+	padding-left:10px;
+	
 }
 
 
@@ -94,10 +97,10 @@
 					/* Nav Bar Donate Button */
 /* Button */
 .navbar .donate {
-    padding: 10px 20px; 
-    color:#8baf7c!important;
+	padding: 10px 20px;
+    color: #8baf7c;
     text-decoration: none;
-    background-color:  #fdfdf5; /* background color */
+    background-color:#fdfdf5; /* background color */
     border-radius: 20px; /* Round off the edges */
     position: relative; /* To position the heart icon */
 	display: inline-block;

@@ -24,8 +24,10 @@
 
 /* Logo */
 .navbar .logo {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 3; /* Remove default margin */
+    padding: 5; /* Remove default padding */
+    height: 110px;
+    width: auto;
 }
 
 

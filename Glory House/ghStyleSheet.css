@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-	font-family: Gothic;
+	font-family: Gotham;
 						/* fin */
 }						
 						
@@ -19,15 +19,6 @@
     background-color: #8baf7c;
     font-family: Arial;
 	border-bottom: 4px solid #465B3C;
-}
-
-
-/* Logo */
-.navbar .logo {
-    margin: 3; /* Remove default margin */
-    padding: 5; /* Remove default padding */
-    height: 110px;
-    width: auto;
 }
 
 
@@ -118,23 +109,12 @@
 					/* Nav Bar Donate Button */
 /* Button */
 .navbar .donate {
-	padding: 10px 20px;
-    color: #8baf7c;
-    text-decoration: none;
+    padding: 10px 20px;
+    color: #8baf7c !important;
     background-color:#fdfdf5; /* background color */
     border-radius: 20px; /* Round off the edges */
-    position: relative; /* To position the heart icon */
-	display: inline-block;
-}
-
-/* Heart Icon */
-.navbar .donate::after {
-    content: '\2764\FE0F'; /* Unicode for heart icon */
-    position: absolute;
-    right: -20px; /* Adjust distance from the text */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Center vertically */
-    color: white; /* Set the color to white */
+    display: inline-block; /* Ensure it doesn't take full width */
+	margin-right: 20px; /* Add space on the right side */
 }
 
 /* Hover effect for Donate Button */
@@ -157,22 +137,48 @@ footer {
     text-align: center; /* Align the copyright notice to the center */
 }
 
+				
+				/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+  background: #E4405F;
+  color: white;
+}
+
 			/* Copyright notice styling */
 footer .copyright {
     color: #738290; 
     font-size: 14px; 
+	margin-top: 20px;
 }
 
 /* Footer Donate Button */
 footer .donate {
     padding: 10px 20px;
-    color: #8baf7c;
-    text-decoration: none;
+    color: #8baf7c !important;
     background-color:#fdfdf5; /* background color */
     border-radius: 20px; /* Round off the edges */
-    position: relative; /* To position the heart icon */
-    margin-top: 20px; /* Add margin to create space between the donate button and copyright notice */
     display: inline-block; /* Ensure it doesn't take full width */
+	text-decoration: none;
 }
 
 /* Hover effect for Footer Donate Button */

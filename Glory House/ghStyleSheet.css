@@ -3,79 +3,76 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-	font-family: Gotham;
-						/* fin */
-}						
-						
-						
-						/*Navigation Styling */
+    font-family: Gotham; /* Setting default font family */
+    /* fin */
+}	
 
+/* Navigation Styling */
+/*--------------------------------------------*/
 /* Navbar container */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    background-color: #8baf7c;
-    font-family: Arial;
-	border-bottom: 4px solid #465B3C;
+    background-color: #8baf7c; /* Background color for navbar */
+    font-family: Arial; /* Font family for navbar text */
+    border-bottom: 4px solid #465B3C; /* Bottom border for navbar */
 }
-
 
 /* NavBar Links (home & who we are) */
 .navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px; /* Padding for navbar links */
+    text-decoration: none;
 }
-/* Underline animation on hover */
+
+/* Underline animation on hover for navbar links */
 .hover-underline-animation {
-  display: inline-block;
-  position: relative;
-  color: #0087ca;
+    display: inline-block;
+    position: relative;
+    color: #0087ca; /* Color of the underline on hover */
 }
 
 .hover-underline-animation::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 4px;
-  bottom: 0;
-  top: 1;
-  left: 0;
-  background-color: #718C64;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: #718C64; /* Color of the underline */
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out; /* Animation duration and timing */
 }
 
 .hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
-/* The dropdown container */
+/* Dropdown container */
 .dropdown {
-  float: left;
-  overflow: hidden;
+    float: left;
+    overflow: hidden;
 }
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px; /* Adjust padding as needed */
-  margin: 0; /* Remove margin */
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px; /* Adjust padding as needed */
+    margin: 0; /* Remove margin */
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
 }
-
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
@@ -88,65 +85,153 @@
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  float: none;
-  color: #738290;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    float: none;
+    color: #738290; /* Color of dropdown links */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
-/* Add a background color to dropdown links on hover */
+/* Add background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color:  #b6ccf1;
+    background-color:  #b6ccf1; /* Background color on hover */
 }
 
-/* Show the dropdown menu on hover */
+/* Show dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-  display: block;
-}				
-					
-					/* Nav Bar Donate Button */
+    display: block;
+}	
+
+/* Nav Bar Donate Button */
+/*--------------------------------------------*/
 /* Button */
 .navbar .donate {
     padding: 10px 20px;
     color: #8baf7c !important;
-    background-color:#fdfdf5; /* background color */
+    background-color:#fdfdf5; /* Background color */
     border-radius: 20px; /* Round off the edges */
     display: inline-block; /* Ensure it doesn't take full width */
-	margin-right: 20px; /* Add space on the right side */
+    margin-right: 20px; /* Add space on the right side */
 }
 
 /* Hover effect for Donate Button */
 .navbar .donate:hover {
-    background-color: #f7f7e0; 
+    background-color: #f7f7e0; /* Background color on hover */
 }
 
-					/*fin donate button */
-					
-					/* fin nav styling */
-					
-					/*footer styling */
+/* Initial Content */
+/*--------------------------------------------*/
+.initial-content {
+    background-color: #f5f5f5; /* Background color for initial content */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif; /* Font family for initial content */
+    text-align: center;
+    color: #008000; /* Text color */
+}
+
+.initial-content h1 {
+    margin-bottom: 10px;
+    color: #2b3948; /* Heading color */
+    font-size: 30pt; /* Heading font size */
+}
+
+.initial-content button {
+    padding: 10px 20px;
+    background-color: #2b3948; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded button edges */
+    cursor: pointer;
+    font-size: 16pt; /* Button font size */
+}
+
+/* Contact Form Container */
+/*--------------------------------------------*/
+.contact-form-container {
+    display: none; /* Initially hidden */
+    background-color: #fff; /* Background color for form container */
+    transform: translateX(-100%); /* Move off-screen */
+    z-index: 2;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.contact-form-container.show {
+    transform: translateX(0); /* Slide in from left when shown */
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Background color for form */
+    font-family: Gotham, Arial, sans-serif; /* Font family for form */
+    font-size: 19pt; /* Font size for form */
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2b3948; /* Heading color for form */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2b3948; /* Label color */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #2b3948; /* Bottom border color for inputs */
+    background: transparent;
+    color: #2b3948; /* Text color for inputs */
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #2b3948; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px; /* Rounded button edges */
+    cursor: pointer;
+    font-size: 16pt; /* Button font size */
+}
+
+.contact-form button:hover {
+    background-color: #5b76af; /* Background color on hover */
+}
+
+/* Footer Styles */
+/*--------------------------------------------*/
 footer {
-    
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #8baf7c;
-    padding: 10px; /* Add padding to create some space around the copyright notice */
-    text-align: center; /* Align the copyright notice to the center */
+    background-color: #8baf7c; /* Background color for footer */
+    padding: 10px;
+    text-align: center;
 }
 
-				
-				/* Style all font awesome icons */
 .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
 }
 
 .fa:hover {
@@ -154,93 +239,84 @@ footer {
 }
 
 .fa-facebook {
-  background: #3B5998;
-  color: white;
+    background: #3B5998; /* Facebook icon color */
+    color: white;
 }
 
-/* Instagram */
 .fa-instagram {
-  background: #E4405F;
-  color: white;
+    background: #E4405F; /* Instagram icon color */
+    color: white;
 }
 
-			/* Copyright notice styling */
 footer .copyright {
-    color: #738290; 
-    font-size: 14px; 
-	margin-top: 20px;
+    color: #738290;  /* Copyright text color */
+    font-size: 14px;  /* Font size for copyright text */
+    margin-top: 20px;
 }
 
-/* Footer Donate Button */
 footer .donate {
     padding: 10px 20px;
     color: #8baf7c !important;
-    background-color:#fdfdf5; /* background color */
-    border-radius: 20px; /* Round off the edges */
-    display: inline-block; /* Ensure it doesn't take full width */
-	text-decoration: none;
+    background-color: #fdfdf5; /* Background color for donate button */
+    border-radius: 20px; /* Rounded button edges */
+    display: inline-block;
+    text-decoration: none;
 }
 
-/* Hover effect for Footer Donate Button */
 footer .donate:hover {
-    background-color: #f7f7e0;
+    background-color: #f7f7e0; /* Background color on hover */
 }
 
-					/*fin footer styling */
-					
-					
-
+/* Image Grid Styles */
+/*--------------------------------------------*/
 .row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
-.center{
-	 align-items:center;
-     justify-content:center; }
 
-/* Create four equal columns that sits next to each other */
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
 .column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
 }
 
 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-  border-radius: 25px;
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 25px; /* Rounded image edges */
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
 }
+
+/* Image Hover Shadow */
 img.hover-shadow {
-  transition: 0.3s;
+    transition: 0.3s;
 }
 
 .hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Shadow on hover */
 }
-
-
-    
- 
